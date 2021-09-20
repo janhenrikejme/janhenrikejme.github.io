@@ -10,7 +10,7 @@
   }
 	
 	
-var tst = require(["https://janhenrikejme.github.io/host/libs/bb_host_communicator"]);
+var tst = require(["https://janhenrikejme.github.io/host/libs/bb_host_communicator.js"]);
 	console.log(tst);
  /* loadScript("https://janhenrikejme.github.io/host/libs/require.js", false);
   loadScript("https://janhenrikejme.github.io/host/libs/require_config.js", false);	*/
