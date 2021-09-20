@@ -1,4 +1,5 @@
-    var responseHandlers = {}; 
+function tst() {    
+var responseHandlers = {}; 
     var handlers = { actions: {} };
 
     function uuidv4() {
@@ -79,3 +80,11 @@
       canHandleAction: canHandleAction,
       handleAction: handleAction
     };  
+}
+
+tst();
+window.vvv = tst();
+
+
+
+
