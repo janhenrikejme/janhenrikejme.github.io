@@ -82,8 +82,10 @@ var responseHandlers = {};
     };  
 }
 
-tst();
+
 window.vvv = tst();
+
+return tst();
 
 
 
