@@ -1,4 +1,3 @@
-define(['jquery'], function($) {
     var responseHandlers = {}; 
     var handlers = { actions: {} };
 
@@ -80,4 +79,3 @@ define(['jquery'], function($) {
       canHandleAction: canHandleAction,
       handleAction: handleAction
     };  
-});
