@@ -1,0 +1,9 @@
+{
+  scope: ["GLOBAL"],
+  is_alive_url: "https://mycousetool.eesysoft.com/alive.html",
+  url: "https://mycousetool.eesysoft.com/app.html",
+  access: {
+    rest: ["/api/v1/profile"],
+    app: ["nav", "notifications"]        
+  }
+}
