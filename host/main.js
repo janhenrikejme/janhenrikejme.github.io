@@ -8,8 +8,12 @@
       var s2 = document.getElementsByTagName('script')[0];
       s2.parentNode.insertBefore(e2, s2);
   }
-  loadScript("https://janhenrikejme.github.io/host/libs/require.js", false);
-  loadScript("https://janhenrikejme.github.io/host/libs/require_config.js", false);	
+	
+	
+var tst = require("https://janhenrikejme.github.io/host/libs/bb_host_communicator");
+	console.log(tst);
+ /* loadScript("https://janhenrikejme.github.io/host/libs/require.js", false);
+  loadScript("https://janhenrikejme.github.io/host/libs/require_config.js", false);	*/
   require(['bb_host_communicator'], function(communicator) {			
 	  console.log("jauda");
             $("#main").html("running");
