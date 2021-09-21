@@ -1,3 +1,5 @@
+var plugins = ["https://janhenrikejme.github.io/plugin/info.txt"];
+
 var onCommunicatorLoaded = function (communicator) {
 	console.log("-----");
 	console.log(communicator);
@@ -34,6 +36,18 @@ var onCommunicatorLoaded = function (communicator) {
   });
 
   console.log("born to be alive!");
+
+
+  // load plugins that cab use endpoints
+  plugins.forEach(function(plugin) {
+    console(plugin);
+    $.get(plugin, function(res) {
+      console.log(JSON.parse(res).url);      
+    });
+
+  });
+
+
 
 };	
 
