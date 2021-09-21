@@ -40,7 +40,7 @@ var onCommunicatorLoaded = function (communicator) {
 
   // load plugins that cab use endpoints
   plugins.forEach(function(plugin) {
-    console(plugin);
+    console.log(plugin);
     $.get(plugin, function(res) {
       console.log(JSON.parse(res).url);      
     });
