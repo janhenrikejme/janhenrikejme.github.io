@@ -42,7 +42,9 @@ var onCommunicatorLoaded = function (communicator) {
   plugins.forEach(function(plugin) {
     console.log(plugin);
     $.get(plugin, function(res) {
-      console.log(JSON.parse(res).url);      
+      var pluginInfo = JSON.parse(res);
+      $("body").append("<iframe id='frm' src='" + pluginInfo.url + "'></iframe>");
+      console.log(pluginInfo.url);      
     });
 
   });
