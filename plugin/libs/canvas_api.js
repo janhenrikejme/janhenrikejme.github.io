@@ -4,10 +4,11 @@ define(['jquery', 'iframe_communicator_client'], function ($, iframe_communicato
         iframe_communicator_client.invoke("hideElement", { selector: "#fixed_bottom" });
     }
 
-    function addButton(title, icon, eventHandler) {
+    function addButton(title, buttonId, icon, eventHandler) {
         iframe_communicator_client.invoke("addButton", { 
             title: title,
-            icon: icon
+            icon: icon,
+            buttonId: buttonId
          }, eventHandler);
     }
     

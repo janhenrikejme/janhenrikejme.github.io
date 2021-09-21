@@ -27,7 +27,7 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
   iframeCommunicatorServer.bind("addButton", (request, response) => {
     var btnTemplate = "<li class=\"ic-app-header__menu-list-item\">\n" +
-    "           <div id=\"dummybtn\" role=\"button\" class=\"ic-app-header__menu-list-link\" data-track-category=\"help system\" data-track-label=\"help button\">\n" +
+    "           <div id=\"" + request.buttonId + "\" role=\"button\" class=\"ic-app-header__menu-list-link\" data-track-category=\"help system\" data-track-label=\"help button\">\n" +
     "              <div class=\"menu-item-icon-container\" role=\"presentation\">\n" +
     "                   " + request.icon + " \n" +
     "\n" +
@@ -40,8 +40,8 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
     $("#menu").append(btnTemplate);
 
-    $(document).on("click", "#dummybtn", function(ev) {
-      response({"gutta": "er kule"});
+    $(document).on("click", "#" + request.buttonId, function(ev) {
+      response({});
     });
   });
 
