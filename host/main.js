@@ -9,10 +9,14 @@
       s2.parentNode.insertBefore(e2, s2);
   }
 	
+function onCommunicatorLoaded(communicator) {
+	console.log("-----");
+		console.log(communicator);
+};	
 
 loadScript("https://janhenrikejme.github.io/host/libs/bb_host_communicator.js", false);	
 		
-	console.log(communicator);
+
 	
 	communicator.registerHandler("showsidebar", function(data, respond) {
                 $("body").append("<iframe id='helpfrm' src='" + data.sidebarurl + "'></iframe>");
