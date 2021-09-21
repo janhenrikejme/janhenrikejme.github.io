@@ -15,7 +15,7 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
     var btnTemplate = "<li class=\"ic-app-header__menu-list-item\">\n" +
     "           <div id=\"dummybtn\" role=\"button\" class=\"ic-app-header__menu-list-link\" data-track-category=\"help system\" data-track-label=\"help button\">\n" +
     "              <div class=\"menu-item-icon-container\" role=\"presentation\">\n" +
-    "                  <svg> <circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"green\" stroke-width=\"4\" fill=\"yellow\" /></svg>\n" +
+    "                   " + request.icon + " \n" +
     "\n" +
     "                <span class=\"menu-item__badge\"></span>\n" +
     "              </div>\n" +
@@ -32,36 +32,6 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   });
 
 
-
-/*
-  communicator.registerHandler("get", function(data, respond) {
-    respond({username: "testusers"});
-  });
-
-  communicator.registerHandler("showsidebar", function(data, respond) {
-    $("body").append("<iframe id='helpfrm' src='" + data.sidebarurl + "'></iframe>");
-    respond({status: "ok"});
-  });
-
-  communicator.registerHandler("element_is", function(data, respond) {
-    respond({result: $('[data-element-ref="' + data.elementRef + '"]').is(data.selector)});
-  });
-
-  communicator.registerHandler("on", function(data, respond) {
-    $(document).on(data.event, data.selector, function(ev) {
-        respond(communicator.eventToObject(ev));
-    });
-  });
-
-
-  $("#showhelp").click(function() {
-    if(communicator.canHandleAction("showhelp")) {
-      communicator.handleAction("showhelp");
-    } else {
-      alert("default handler");
-    }
-  });
-*/
   console.log("born to be alive!");
 
 
@@ -73,7 +43,6 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
       $("body").append("<iframe id='frm' src='" + pluginPath + pluginConfig.url + "'></iframe>");
       console.log(pluginConfig.url);      
     });
-
   });
 
 
