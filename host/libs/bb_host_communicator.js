@@ -1,5 +1,5 @@
 function tst() {    
-var responseHandlers = {}; 
+var responseHandlers = {};  
     var handlers = { actions: {} };
 
     function uuidv4() {
