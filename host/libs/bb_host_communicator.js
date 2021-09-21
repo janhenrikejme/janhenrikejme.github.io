@@ -83,7 +83,7 @@ var responseHandlers = {};
 }
 
 
-window.bb_host_communicator = tst();
+window.communicator = tst();
 
 
 
