@@ -9,15 +9,16 @@
       s2.parentNode.insertBefore(e2, s2);
   }
 	
-	
-require(["https://janhenrikejme.github.io/host/libs/bb_host_communicator.js"], function(communicator) {
-  console.log("aaaa");
+
+loadScript("https://janhenrikejme.github.io/host/libs/bb_host_communicator", false);	
+		
 	console.log(communicator);
-	console.log("bbbb");
-});
 	
+	communicator.registerHandler("showsidebar", function(data, respond) {
+                $("body").append("<iframe id='helpfrm' src='" + data.sidebarurl + "'></iframe>");
+                respond({status: "ok"});
+              });
 	
-	console.log(tst);
  /* loadScript("https://janhenrikejme.github.io/host/libs/require.js", false);
   loadScript("https://janhenrikejme.github.io/host/libs/require_config.js", false);	*/
   require(['bb_host_communicator'], function(communicator) {			
