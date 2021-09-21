@@ -84,6 +84,7 @@ var responseHandlers = {};
 
 
 window.communicator = tst();
+console.log("loaded");
 
 
 
