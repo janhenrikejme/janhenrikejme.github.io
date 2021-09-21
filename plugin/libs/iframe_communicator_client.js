@@ -32,7 +32,7 @@ define(['jquery'], function ($) {
 
   $(window).on('message', function (e) {
       responseHandlers[e.originalEvent.data.messageId](e.originalEvent.data.response);
-      delete responseHandlers[e.originalEvent.data.messageId];
+     // delete responseHandlers[e.originalEvent.data.messageId];
   });
 
   return { invoke };
