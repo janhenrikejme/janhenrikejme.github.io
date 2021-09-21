@@ -12,6 +12,12 @@
                    console.log(response);
             });
 
+            iframe_communicator_client.invoke("addButton", { title: "Høgg!"}, function(response) {
+                   console.log("Clickkkkkk!!!");
+            });
+
+
+
          /*   iframe_communicator_client.invoke("on")
 					  bb_communicator.on("mousemove", ":root", function(response) {
 					    console.log(response);
