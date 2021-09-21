@@ -9,6 +9,11 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
     });
   });
 
+  iframeCommunicatorServer.bind("rest.get", (request, response) => {
+    $.get(request.url, response);
+  });
+
+
   iframeCommunicatorServer.bind("hideElement", (request, response) => {
     $(request.selector).hide();
   });

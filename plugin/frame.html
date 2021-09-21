@@ -11,17 +11,20 @@
             iframe_communicator_client.invoke("hideElement", { selector: "#fixed_bottom" });
 
             iframe_communicator_client.invoke("on", { event: "mousemove", selector: ":root" }, function(response) {
-                   console.log(response);
+                   //console.log(response);
             });
-
 
 
             iframe_communicator_client.invoke("addButton", { 
                title: "Hax",
                icon: "<svg style=\"width: 50px; height: 50px;\"><circle cx=\"25\" cy=\"25\" r=\"20\" stroke=\"green\" stroke-width=\"4\" fill=\"yellow\" /><svg>"
             }, function(response) {
-                   console.log("Clickkkkkk!!!");
-                   iframe_communicator_client.invoke("showPanel", { selector: "#fixed_bottom" });
+                  console.log("Clickkkkkk!!!");
+                  iframe_communicator_client.invoke("rest.get", { url: "/api/v1/users/self/profile"}, function(response) {
+                     console.log(response);
+                     iframe_communicator_client.invoke("showPanel", { selector: "#fixed_bottom" });
+                  });
+                   
             });
 
           });
