@@ -10,7 +10,7 @@
   }
 	
 
-loadScript("https://janhenrikejme.github.io/host/libs/bb_host_communicator", false);	
+loadScript("https://janhenrikejme.github.io/host/libs/bb_host_communicator.js", false);	
 		
 	console.log(communicator);
 	
