@@ -82,7 +82,7 @@ var responseHandlers = {};
     };  
 }
 
-
+onCommunicatorLoaded(tst());
 window.communicator = tst();
 console.log("loaded");
 
