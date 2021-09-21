@@ -82,8 +82,8 @@ var responseHandlers = {};
     };  
 }
 
-tst;
-/*window.vvv = tst();*/
+
+window.bb_host_communicator = tst();
 
 
 
