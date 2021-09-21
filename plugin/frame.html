@@ -8,9 +8,13 @@
      <div id="main">main</main>
           <script>
 	        require(['jquery', 'iframe_communicator_client'], function($, iframe_communicator_client) {
+            iframe_communicator_client.invoke("hideElement", { selector: "#fixed_bottom" });
+
             iframe_communicator_client.invoke("on", { event: "mousemove", selector: ":root" }, function(response) {
                    console.log(response);
             });
+
+
 
             iframe_communicator_client.invoke("addButton", { 
                title: "Hax",
