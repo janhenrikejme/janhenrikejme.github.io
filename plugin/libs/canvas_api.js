@@ -11,10 +11,21 @@ define(['jquery', 'iframe_communicator_client'], function ($, iframe_communicato
          }, eventHandler);
     }
     
+    function restGet(url, responseHandler) {
+        iframe_communicator_client.invoke("rest.get", { url: url }, responseHandler);
+    }
+
+    function showPanel(title, content) {
+        iframe_communicator_client.invoke("showPanel", { title: title, content: content });
+    }
 
     return {
         hideBottomBar: hideBottomBar,
-        addButton: addButton
+        addButton: addButton,
+        showPanel: showPanel,
+        rest: {
+            get: restGet
+        }
     };
   
 });
