@@ -20,10 +20,15 @@ define(['jquery', 'iframe_communicator_client'], function ($, iframe_communicato
         iframe_communicator_client.invoke("showPanel", { title: title, content: content });
     }
 
+    function on(event, selector, responseHandler) {
+        iframe_communicator_client.invoke("on", { event: event, selector: selector }, responseHandler);
+    }
+
     return {
         hideBottomBar: hideBottomBar,
         addButton: addButton,
         showPanel: showPanel,
+        on: on,
         rest: {
             get: restGet
         }

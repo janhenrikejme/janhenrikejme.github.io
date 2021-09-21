@@ -18,25 +18,9 @@
                 });
               });
 
-            
-
-/*            iframe_communicator_client.invoke("on", { event: "mousemove", selector: ":root" }, function(response) {
-                   //console.log(response);
-            });*/
-
-
-/*            iframe_communicator_client.invoke("addButton", { 
-               title: "Hax",
-               icon: 
-            }, function(response) {
-                  console.log("Clickkkkkk!!!");
-                  iframe_communicator_client.invoke("rest.get", { url: "/api/v1/users/self/profile"}, function(response) {
-                     console.log(response);
-                     iframe_communicator_client.invoke("showPanel", { title: "Hey! " + response.name });
-                  });
-                   
-            });*/
-
+              canvasApi.on("mousemove", ":root", function(response) {
+               console.log(response);
+              });
           });
 	      </script>
 
