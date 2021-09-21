@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <script type="text/javascript" src = "libs/require.js"></script>
+      <script type="text/javascript" src = "libs/require_config.js"></script>
+   </head>
+
+   <body>
+     <div id="main">main</main>
+          <script>
+	        require(['jquery', 'bb_communicator'], function($, bb_communicator) {
+					  bb_communicator.on("mousemove", ":root", function(response) {
+					    console.log(response);
+              bb_communicator.element_is(response.target.reference, '.sampleclass', function(response) {
+                  console.log(response);
+              });
+					  });
+
+           bb_communicator.on("click", ".sampleclass", function(response) {
+                bb_communicator.get("user", function(response) {
+                  console.log(response);
+                });
+           });
+
+           bb_communicator.action("showhelp", function(response) {
+              bb_communicator.trigger("showsidebar", {sidebarurl: './help.html'}, function(response) {
+               console.log(response); 
+              })
+              console.log("showhelp!!!!!");
+           });
+
+
+          });
+	      </script>
+
+
+   </body>
+</html>

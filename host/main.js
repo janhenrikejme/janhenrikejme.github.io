@@ -1,4 +1,4 @@
-var plugins = ["https://janhenrikejme.github.io/plugin/info.txt"];
+var plugins = ["https://janhenrikejme.github.io/plugin/"];
 
 var onCommunicatorLoaded = function (communicator) {
 	console.log("-----");
@@ -39,12 +39,12 @@ var onCommunicatorLoaded = function (communicator) {
 
 
   // load plugins that cab use endpoints
-  plugins.forEach(function(plugin) {
-    console.log(plugin);
-    $.get(plugin, function(res) {
-      var pluginInfo = JSON.parse(res);
-      $("body").append("<iframe id='frm' src='" + pluginInfo.url + "'></iframe>");
-      console.log(pluginInfo.url);      
+  plugins.forEach(function(pluginPath) {
+    console.log(pluginPath);
+    $.get(pluginPath + "config.json", function(res) {
+      var pluginConfig = JSON.parse(res);
+      $("body").append("<iframe id='frm' src='" + pluginPath + pluginConfig.url + "'></iframe>");
+      console.log(pluginConfig.url);      
     });
 
   });
