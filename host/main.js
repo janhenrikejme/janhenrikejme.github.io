@@ -24,7 +24,7 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
     $("#menu").append(btnTemplate);
 
-    $(document).on("click", "dummybtn", function(ev) {
+    $(document).on("click", "#dummybtn", function(ev) {
       response({"gutta": "er kule"});
     });
   });
