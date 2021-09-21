@@ -2,7 +2,6 @@ var plugins = ["https://janhenrikejme.github.io/plugin/"];
 
 var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 	console.log("-----");
-	console.log(communicator);
 
   iframeCommunicatorServer.bind("on", (request, response) => {
     $(document).on(request.event, request.selector, function(ev) {
