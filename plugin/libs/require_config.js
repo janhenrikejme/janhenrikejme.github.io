@@ -8,9 +8,7 @@ require.config({
  // urlArgs: "_=" + new Date().getTime(),
   baseUrl: './libs',
   paths: {
-
     'jquery': './jquery-3.3.1.min',
-    'bb_communicator': './bb_communicator',
-    'bb_host_communicator': './bb_host_communicator'
+    'iframe_communicator_client': './iframe_communicator_client'
   }
 });

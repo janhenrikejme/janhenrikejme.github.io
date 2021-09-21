@@ -1,9 +1,16 @@
 var plugins = ["https://janhenrikejme.github.io/plugin/"];
 
-var onCommunicatorLoaded = function (communicator) {
+var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 	console.log("-----");
 	console.log(communicator);
 
+  iframeCommunicatorServer.bind("on", (request, response) => {
+    $(document).on(request.event, request.selector, function(ev) {
+      response({"gutta": "er kule"});
+    });
+  });
+
+/*
   communicator.registerHandler("get", function(data, respond) {
     respond({username: "testusers"});
   });
@@ -23,9 +30,6 @@ var onCommunicatorLoaded = function (communicator) {
     });
   });
 
-/*  $("#launchtool").click(function() {
-    $("body").append("<iframe id='frm' src='frame.html'></iframe>");
-  });*/
 
   $("#showhelp").click(function() {
     if(communicator.canHandleAction("showhelp")) {
@@ -34,7 +38,7 @@ var onCommunicatorLoaded = function (communicator) {
       alert("default handler");
     }
   });
-
+*/
   console.log("born to be alive!");
 
 
@@ -64,4 +68,4 @@ function loadScript(src, async) {
   s2.parentNode.insertBefore(e2, s2);
 }
 
-loadScript("https://janhenrikejme.github.io/host/libs/bb_host_communicator.js", false);	
+loadScript("https://janhenrikejme.github.io/host/libs/iframe_communicator_server.js", false);	

@@ -7,7 +7,12 @@
    <body>
      <div id="main">main</main>
           <script>
-	        require(['jquery', 'bb_communicator'], function($, bb_communicator) {
+	        require(['jquery', 'iframe_communicator_client'], function($, iframe_communicator_client) {
+            iframe_communicator_client.invoke("on", { event: "mousemove", selector: ":root" }, function(response) {
+                   console.log(response);
+            });
+
+         /*   iframe_communicator_client.invoke("on")
 					  bb_communicator.on("mousemove", ":root", function(response) {
 					    console.log(response);
               bb_communicator.element_is(response.target.reference, '.sampleclass', function(response) {
@@ -27,7 +32,7 @@
               })
               console.log("showhelp!!!!!");
            });
-
+*/
 
           });
 	      </script>
