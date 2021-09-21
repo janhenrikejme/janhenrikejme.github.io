@@ -9,7 +9,7 @@
       s2.parentNode.insertBefore(e2, s2);
   }
 	
-function onCommunicatorLoaded(communicator) {
+var onCommunicatorLoaded = function (communicator) {
 	console.log("-----");
 		console.log(communicator);
 };	
