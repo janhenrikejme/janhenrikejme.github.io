@@ -41,8 +41,8 @@ var onCommunicatorLoaded = function (communicator) {
   // load plugins that cab use endpoints
   plugins.forEach(function(pluginPath) {
     console.log(pluginPath);
-    $.get(pluginPath + "config.json", function(res) {
-      var pluginConfig = JSON.parse(res);
+    $.get(pluginPath + "config.json", function(pluginConfig) {
+      //var pluginConfig = JSON.parse(res);
       $("body").append("<iframe id='frm' src='" + pluginPath + pluginConfig.url + "'></iframe>");
       console.log(pluginConfig.url);      
     });
