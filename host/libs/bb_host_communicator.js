@@ -82,10 +82,10 @@ var responseHandlers = {};
     };  
 }
 
+tst;
+/*window.vvv = tst();*/
 
-window.vvv = tst();
 
-return tst();
 
 
 
