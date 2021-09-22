@@ -4,9 +4,9 @@ function init() {
   window.addEventListener("message", (e) => {
       if (handlers[e.data.messageHandler] == undefined) return;
 
-        console.log("*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+        console.log("*-*-*-*-*-*-*-*-*-*-*-*-*-*-2");
         console.log(e);
-        console.log($(e.source));
+        console.log($(e.sourceElement));
 
       handlers[e.data.messageHandler](e.data, (response) => {
           if (e.source && !(e.source instanceof MessagePort) && !(e.source instanceof ServiceWorker)) {
