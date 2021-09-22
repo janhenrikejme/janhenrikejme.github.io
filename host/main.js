@@ -61,9 +61,11 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   // load plugins that can use endpoints
   plugins.forEach(function(pluginPath) {
     $.get(pluginPath + "config.json", function(pluginConfig) {
-      if (getActiveScopes().filter(Set.prototype.has, new Set(pluginConfig.scope)).length > 0) {
-        $("body").append("<iframe id='frm' src='" + pluginPath + pluginConfig.url + "'></iframe>");
-      }
+      pluginConfig.scopes.forEach(function(scope) {
+        if (getActiveScopes().filter(Set.prototype.has, new Set(scope.scope)).length > 0) {
+          $("body").append("<iframe id='frm' src='" + pluginPath + scope.url + "'></iframe>");
+        }  
+      });
     });
   });
 };	

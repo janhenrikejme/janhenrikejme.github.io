@@ -1,7 +1,16 @@
 {
-  "scope": ["COURSES"],
   "is_alive_url": "https://mycousetool.eesysoft.com/alive.html",
-  "url": "/frame.html",
+  "scopes": [ 
+    {
+      "scope": ["COURSES"],
+      "url": "/frame.html"
+    },
+    {
+      "scope": ["GLOBAL"],
+      "url": "/frame2.html"
+    }
+  ],
+  
   "access": {
     "rest": ["/api/v1/profile"],
     "app": ["nav", "notifications"]        
