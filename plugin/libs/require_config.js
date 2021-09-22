@@ -10,6 +10,7 @@ require.config({
   paths: {
     'jquery': './jquery-3.3.1.min',
     'iframe_communicator_client': './iframe_communicator_client',
-    'canvas_api': './canvas_api'
+    'canvas_api': './canvas_api',
+    'resources': './resources',
   }
 });
