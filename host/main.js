@@ -53,7 +53,6 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
     return res;
   }
-  a.filter(Set.prototype.has, new Set(b));
 
   // load plugins that cab use endpoints
   plugins.forEach(function(pluginPath) {
