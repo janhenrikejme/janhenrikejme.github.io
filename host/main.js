@@ -53,6 +53,7 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   plugins.forEach(function(pluginPath) {
     console.log(pluginPath);
     $.get(pluginPath + "config.json", function(pluginConfig) {
+      console.log(pluginConfig);
       //var pluginConfig = JSON.parse(res);
       $("body").append("<iframe id='frm' src='" + pluginPath + pluginConfig.url + "'></iframe>");
       console.log(pluginConfig.url);      
