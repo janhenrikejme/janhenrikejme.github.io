@@ -16,7 +16,7 @@ function init() {
           win = iframe.contentWindow || iframe.contentDocument.defaultView;
 
           if (win === event.source) {
-              e.data.iframe = win;
+              e.data.iframe = iframe;
           }
       
           // Comparison
