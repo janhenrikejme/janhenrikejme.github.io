@@ -1,5 +1,5 @@
 {
-  "scope": ["GLOBAL"],
+  "scope": ["COURSES"],
   "is_alive_url": "https://mycousetool.eesysoft.com/alive.html",
   "url": "/frame.html",
   "access": {

@@ -51,18 +51,18 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   function getActiveScopes() {
     var res = ['GLOBAL'];
 
+    if (document.location.pathname.indexOf("/courses/") == 0) {
+      res.push('COURSES');
+    }
+
     return res;
   }
 
-  // load plugins that cab use endpoints
+  // load plugins that can use endpoints
   plugins.forEach(function(pluginPath) {
-    console.log(pluginPath);
     $.get(pluginPath + "config.json", function(pluginConfig) {
-      console.log(pluginConfig);
-      //var pluginConfig = JSON.parse(res);
       if (getActiveScopes().filter(Set.prototype.has, new Set(pluginConfig.scope)).length > 0) {
         $("body").append("<iframe id='frm' src='" + pluginPath + pluginConfig.url + "'></iframe>");
-        console.log(pluginConfig.url);        
       }
     });
   });
