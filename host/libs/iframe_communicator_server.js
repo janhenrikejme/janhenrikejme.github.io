@@ -5,7 +5,7 @@ function init() {
       if (handlers[e.data.messageHandler] == undefined) return;
 
         console.log("*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
-        console.log(e.source);
+        console.log(e);
         console.log($(e.source));
 
       handlers[e.data.messageHandler](e.data, (response) => {
