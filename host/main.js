@@ -21,8 +21,11 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
     console.log("*********************");
     console.log(request);
 
-    console.log("--pluginAccess--2")
-  console.log(pluginAccess)
+    console.log("--pluginAccess--2");
+  console.log(pluginAccess);
+  console.log("...and");
+  console.log(pluginAccess[$(request.iframe).data("pluginPath")]);
+
 
     $(request.selector).hide();
   });
