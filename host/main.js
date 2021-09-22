@@ -48,6 +48,12 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
   console.log("born to be alive!");
 
+  function getActiveScopes() {
+    var res = ['GLOBAL'];
+
+    return res;
+  }
+  a.filter(Set.prototype.has, new Set(b));
 
   // load plugins that cab use endpoints
   plugins.forEach(function(pluginPath) {
@@ -55,13 +61,12 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
     $.get(pluginPath + "config.json", function(pluginConfig) {
       console.log(pluginConfig);
       //var pluginConfig = JSON.parse(res);
-      $("body").append("<iframe id='frm' src='" + pluginPath + pluginConfig.url + "'></iframe>");
-      console.log(pluginConfig.url);      
+      if (getActiveScopes().filter(Set.prototype.has, new Set(pluginConfig.scope)).length > 0) {
+        $("body").append("<iframe id='frm' src='" + pluginPath + pluginConfig.url + "'></iframe>");
+        console.log(pluginConfig.url);        
+      }
     });
   });
-
-
-
 };	
 
 
