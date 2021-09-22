@@ -1,4 +1,5 @@
 var plugins = ["https://janhenrikejme.github.io/plugin/"];
+var pluginAccess = {};
 
 var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 	console.log("-----");
@@ -65,6 +66,8 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   // load plugins that can use endpoints
   plugins.forEach(function(pluginPath) {
     $.get(pluginPath + "config.json", function(pluginConfig) {
+      pluginAccess[pluginPath] = pluginConfig.access;
+      console.log(pluginConfig.access);
       pluginConfig.scopes.forEach(function(scope) {
         if (getActiveScopes().filter(Set.prototype.has, new Set(scope.scope)).length > 0) {
           $("body").append("<iframe data-plugin-path='" + pluginPath + "' id='frm' src='" + pluginPath + scope.url + "'></iframe>");
@@ -72,6 +75,8 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
       });
     });
   });
+  console.log("--pluginAccess--")
+  console.log(pluginAccess)
 };	
 
 
