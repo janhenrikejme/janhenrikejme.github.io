@@ -4,9 +4,9 @@ function init() {
   window.addEventListener("message", (e) => {
       if (handlers[e.data.messageHandler] == undefined) return;
 
-        console.log("*-*-*-*-*-*-*-*-*-*-*-*-*-*-2");
-        console.log(e.source);
-        console.log($(e.sourceElement));
+        console.log("*-*-*-*-*-*-*-*-*-*-*-*-*-*-3");
+/*        console.log(e.source);
+        console.log($(e.sourceElement));*/
 
         var iframes = document.getElementsByTagName('IFRAME');
         for (var i = 0, iframe, win; i < iframes.length; i++) {
