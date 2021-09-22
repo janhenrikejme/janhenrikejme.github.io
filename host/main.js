@@ -20,6 +20,10 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
     console.log($(request.iframe).data("pluginPath"));
     console.log("*********************");
     console.log(request);
+
+    console.log("--pluginAccess--2")
+  console.log(pluginAccess)
+
     $(request.selector).hide();
   });
 
@@ -67,9 +71,6 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   plugins.forEach(function(pluginPath) {
     $.get(pluginPath + "config.json", function(pluginConfig) {
       pluginAccess[pluginPath] = pluginConfig.access;
-      console.log(pluginConfig.access);
-      console.log("aaa");
-      console.log(pluginAccess);
       pluginConfig.scopes.forEach(function(scope) {
         if (getActiveScopes().filter(Set.prototype.has, new Set(scope.scope)).length > 0) {
           $("body").append("<iframe data-plugin-path='" + pluginPath + "' id='frm' src='" + pluginPath + scope.url + "'></iframe>");
@@ -77,8 +78,7 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
       });
     });
   });
-  console.log("--pluginAccess--")
-  console.log(pluginAccess)
+  
 };	
 
 
