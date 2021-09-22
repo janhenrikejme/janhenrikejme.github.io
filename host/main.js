@@ -38,6 +38,11 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
    
 
   iframeCommunicatorServer.bind("addButton", (request, response) => {
+    if (pluginAccess[$(request.iframe).data("pluginPath")].app.indexOf("nav.addButton") == -1) {
+      console.log($(request.iframe).data("pluginPath") + " do not have access to nav.addButton");
+      return;
+    }
+
     var btnTemplate = "<li class=\"ic-app-header__menu-list-item\">\n" +
     "           <div id=\"" + request.buttonId + "\" role=\"button\" class=\"ic-app-header__menu-list-link\" data-track-category=\"help system\" data-track-label=\"help button\">\n" +
     "              <div class=\"menu-item-icon-container\" role=\"presentation\">\n" +
