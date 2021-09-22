@@ -26,9 +26,11 @@ define(['jquery', 'iframe_communicator_client'], function ($, iframe_communicato
 
     return {
         hideBottomBar: hideBottomBar,
-        addButton: addButton,
         showPanel: showPanel,
         on: on,
+        nav: {
+            addButton: addButton,
+        },
         rest: {
             get: restGet
         }

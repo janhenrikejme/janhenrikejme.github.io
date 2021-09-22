@@ -15,6 +15,8 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
 
   iframeCommunicatorServer.bind("hideElement", (request, response) => {
+    console.log("*********************");
+    console.log(request);
     $(request.selector).hide();
   });
 
@@ -63,7 +65,7 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
     $.get(pluginPath + "config.json", function(pluginConfig) {
       pluginConfig.scopes.forEach(function(scope) {
         if (getActiveScopes().filter(Set.prototype.has, new Set(scope.scope)).length > 0) {
-          $("body").append("<iframe id='frm' src='" + pluginPath + scope.url + "'></iframe>");
+          $("body").append("<iframe data-plugin-path='" + pluginPath + "' id='frm' src='" + pluginPath + scope.url + "'></iframe>");
         }  
       });
     });
