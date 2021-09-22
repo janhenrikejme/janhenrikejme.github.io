@@ -14,10 +14,14 @@ function init() {
       
           // Cross-browser way to get iframe's window object
           win = iframe.contentWindow || iframe.contentDocument.defaultView;
+
+          if (win === event.source) {
+              e.iframe = win;
+          }
       
           // Comparison
-          console.log(iframe.src +
-            (win === event.source ? ' MATCHES.\n' : ' is not our IFrame.\n'))
+//          console.log(iframe.src +
+//            ( ? ' MATCHES.\n' : ' is not our IFrame.\n'))
         }
 
 
