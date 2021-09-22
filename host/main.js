@@ -15,8 +15,8 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
 
   iframeCommunicatorServer.bind("hideElement", (request, response) => {
-    console.log("--------a");
-    console.log($(request.iframe.parent));
+    console.log("--------b");
+    console.log(request.iframe);
     console.log("*********************");
     console.log(request);
     $(request.selector).hide();
