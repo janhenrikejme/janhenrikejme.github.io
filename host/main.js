@@ -37,7 +37,7 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
    
 
-  iframeCommunicatorServer.bind("addButton", (request, response) => {
+  iframeCommunicatorServer.bind("nav.addButton", (request, response) => {
     if (pluginAccess[$(request.iframe).data("pluginPath")].app.indexOf("nav.addButton") == -1) {
       console.log($(request.iframe).data("pluginPath") + " do not have access to nav.addButton");
       return;

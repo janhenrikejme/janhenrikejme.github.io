@@ -5,7 +5,7 @@ define(['jquery', 'iframe_communicator_client'], function ($, iframe_communicato
     }
 
     function addButton(title, buttonId, icon, eventHandler) {
-        iframe_communicator_client.invoke("addButton", { 
+        iframe_communicator_client.invoke("nav.addButton", { 
             title: title,
             icon: icon,
             buttonId: buttonId
