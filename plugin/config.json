@@ -12,7 +12,7 @@
   ],
   
   "access": {
-    "rest": ["/api/v1/profile"],
+    "rest": ["/api/v1/users/self/profile"],
     "app": ["nav.addButton", "notifications"]        
   }
 }
