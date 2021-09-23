@@ -2,8 +2,6 @@ var plugins = ["https://janhenrikejme.github.io/plugin/"];
 var pluginAccess = {};
 
 var onCommunicatorLoaded = function (iframeCommunicatorServer) {
-	console.log("-----");
-
   iframeCommunicatorServer.bind("on", (request, response) => {
     $(document).on(request.event, request.selector, function(ev) {
       response({"gutta": "er kule"});
@@ -11,22 +9,13 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   });
 
   iframeCommunicatorServer.bind("rest.get", (request, response) => {
+    console.log("sdsds");
+    console.log(pluginAccess[$(request.iframe).data("pluginPath")].app);
     $.get(request.url, response);
   });
 
 
   iframeCommunicatorServer.bind("hideElement", (request, response) => {
-    console.log("--------b");
-    console.log($(request.iframe).data("pluginPath"));
-    console.log("*********************");
-    console.log(request);
-
-    console.log("--pluginAccess--2");
-  console.log(pluginAccess);
-  console.log("...and");
-  console.log(pluginAccess[$(request.iframe).data("pluginPath")]);
-
-
     $(request.selector).hide();
   });
 
@@ -62,8 +51,6 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
     });
   });
 
-
-  console.log("born to be alive!");
 
   function getActiveScopes() {
     var res = ['GLOBAL'];
