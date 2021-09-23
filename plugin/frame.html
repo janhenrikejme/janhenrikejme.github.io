@@ -7,12 +7,10 @@
    <body>
      <div id="main">main</main>
           <script>
-	        require(['jquery', 'canvas_api'], function($, canvasApi) {
-              var buttonIcon = "<svg style=\"width: 50px; height: 50px;\"><circle cx=\"25\" cy=\"25\" r=\"20\" stroke=\"green\" stroke-width=\"4\" fill=\"yellow\" /><svg>";
-
+	        require(['jquery', 'canvas_api', 'resources'], function($, canvasApi, resources) {
               canvasApi.hideBottomBar();
 
-              canvasApi.nav.addButton("Hax", "haxBtn", buttonIcon, function() {           
+              canvasApi.nav.addButton("Hax", "haxBtn", resources.svg.cogwheels, function() {           
                 canvasApi.rest.get("/api/v1/users/self/profile", function(response) {
                   canvasApi.showPanel("Hey! " + response.name, "Das content")
                 });
