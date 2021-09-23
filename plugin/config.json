@@ -3,7 +3,7 @@
   "scopes": [ 
     {
       "scope": ["COURSES"],
-      "url": "/frame.html"
+      "url": "/course_tool.html"
     },
     {
       "scope": ["GLOBAL"],
