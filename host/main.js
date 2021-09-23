@@ -9,11 +9,11 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   });
 
   iframeCommunicatorServer.bind("rest.get", (request, response) => {
-    console.log("sdsds5");
-console.log(pluginAccess[$(request.iframe).data("pluginPath")].rest);
-console.log(request.url);
-console.log(pluginAccess[$(request.iframe).data("pluginPath")].rest.indexOf(request.url));
-    console.log(pluginAccess[$(request.iframe).data("pluginPath")].rest.indexOf(request.url));
+    if (pluginAccess[$(request.iframe).data("pluginPath")].rest.indexOf(request.url) == -1) {
+      console.log($(request.iframe).data("pluginPath") + " do not have access to the rest endpoint " + request.url);
+      return;
+    }
+
     $.get(request.url, response);
   });
 
