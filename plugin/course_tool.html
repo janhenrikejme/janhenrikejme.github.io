@@ -11,7 +11,7 @@
 	        require(['jquery', 'canvas_api', './resources'], function($, canvasApi, resources) {
               canvasApi.hideBottomBar();
 
-              canvasApi.nav.addButton("Hax", "haxBtn", resources.svg.cogwheels, function() {           
+              canvasApi.nav.addButton("Course tool", "haxBtn", resources.svg.cogwheels, function() {           
                 canvasApi.rest.get("/api/v1/users/self/profile", function(response) {
                   canvasApi.showPanel("Hey! " + response.name, "Das content")
                 });

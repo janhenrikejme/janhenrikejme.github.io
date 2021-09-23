@@ -10,7 +10,7 @@
 	        require(['jquery', 'canvas_api', 'resources'], function($, canvasApi, resources) {
               canvasApi.hideBottomBar();
 
-              canvasApi.nav.addButton("Hax", "haxBtn", resources.svg.dices, function() {           
+              canvasApi.nav.addButton("Global tool", "haxBtn", resources.svg.dices, function() {           
                 canvasApi.rest.get("/api/v1/users/self/profile", function(response) {
                   canvasApi.showPanel("Hey " + response.name, "<b> A message from</b> the plugin")
                 });
