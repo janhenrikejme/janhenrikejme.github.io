@@ -10,7 +10,7 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
 
   iframeCommunicatorServer.bind("rest.get", (request, response) => {
     console.log("sdsds");
-    console.log(pluginAccess[$(request.iframe).data("pluginPath")].app);
+    console.log(pluginAccess[$(request.iframe).data("pluginPath")].rest);
     $.get(request.url, response);
   });
 
