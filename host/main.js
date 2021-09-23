@@ -9,10 +9,10 @@ var onCommunicatorLoaded = function (iframeCommunicatorServer) {
   });
 
   iframeCommunicatorServer.bind("rest.get", (request, response) => {
-    console.log("sdsds4");
+    console.log("sdsds5");
 console.log(pluginAccess[$(request.iframe).data("pluginPath")].rest);
 console.log(request.url);
-
+console.log(pluginAccess[$(request.iframe).data("pluginPath")].rest.indexOf(request.url));
     console.log(pluginAccess[$(request.iframe).data("pluginPath")].rest.indexOf(request.url));
     $.get(request.url, response);
   });
