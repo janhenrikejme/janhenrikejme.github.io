@@ -8,7 +8,7 @@ require.config({
  // urlArgs: "_=" + new Date().getTime(),
   baseUrl: './libs',
   paths: {
-    'jquery': './jquery-3.3.1.min',
+    'jquery': 'https://eesy.github.io/shared/plugins/v1/libs/jquery-3.3.1.min',
     'iframe_communicator_client': 'https://eesy.github.io/shared/plugins/v1/libs/iframe_communicator_client',
     'canvas_api': 'https://eesy.github.io/shared/plugins/v1/libs/canvas_api',
     'resources': './resources',
