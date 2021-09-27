@@ -5,24 +5,17 @@
    </head>
 
    <body>
-     <div id="main">main</main>
-          <script>
-             //var vvv = require("/resources.js");
-	        require(['jquery', 'canvas_api', './resources'], function($, canvasApi, resources) {
-              canvasApi.hideBottomBar();
-
-              canvasApi.nav.addButton("Course tool", "haxBtn", resources.svg.cogwheels, function() {           
-                canvasApi.rest.get("/api/v1/users/self/profile", function(response) {
-                  canvasApi.showPanel("Hey! " + response.name, "Das content")
-                });
+      <script>
+          require(['canvas_api', './resources'], function(canvasApi, resources) {
+            // Add a button to the canvas menu...With a click handler
+            canvasApi.nav.addButton("Course tool", "haxBtn", resources.svg.cogwheels, function() {           
+              // Pull some info from a rest endpoint
+              canvasApi.rest.get("/api/v1/users/self/profile", function(response) {
+                // ...and use it 
+                canvasApi.showPanel("Hey! " + response.name, "This is a message from a plugin")
               });
-
-              canvasApi.on("mousemove", ":root", function(response) {
-              // console.log(response);
-              });
-          });
-	      </script>
-
-
+            });
+        });
+      </script>
    </body>
 </html>

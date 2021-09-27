@@ -1,5 +1,13 @@
 {
-  "is_alive_url": "https://mycousetool.eesysoft.com/alive.html",
+  "plugin": {
+    "name": "SamplePlugin",
+    "version": "0.0.0.1 Beta",
+    "vendor": "Oslo Backend boys"
+  },
+  "access": {
+    "rest": ["/api/v1/users/self/profile"],
+    "app": ["nav.addButton", "notifications"]        
+  },
   "scopes": [ 
     {
       "scope": ["COURSES"],
@@ -9,10 +17,5 @@
       "scope": ["GLOBAL"],
       "url": "/global_tool.html"
     }
-  ],
-  
-  "access": {
-    "rest": ["/api/v1/users/self/profile"],
-    "app": ["nav.addButton", "notifications"]        
-  }
+  ]
 }
