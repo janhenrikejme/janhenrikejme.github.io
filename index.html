@@ -1216,6 +1216,9 @@
                     }
                 };
                 tick();
+              const el = document.querySelector('#main-content-begin > article > div > div.media-top-relation.article--c-lgSNPV.article--c-lgSNPV-bGpYD-cv.article--c-lgSNPV-jcQkYo-cv > div > amedia-image > figure:nth-child(2)');
+              
+            if (el) {el.remove();}
             };
             // Run on pageshow (covers BFCache and back/forward misses). Use once to avoid duplicates.
             window.addEventListener('pageshow', () => tryRun(), { once: true, capture: true });
