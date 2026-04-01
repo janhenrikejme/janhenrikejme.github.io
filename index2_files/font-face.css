@@ -1,0 +1,212 @@
+/* National2 */
+
+@font-face {
+  font-family: 'National2';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-light.woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-regular-italic.woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-medium.woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-medium-italic.woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* National2 Narrow */
+
+@font-face {
+  font-family: 'National2 Narrow';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-narrow-regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2 Narrow';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-narrow-bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'National2 Narrow';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/national-2-narrow-extrabold.woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tiempos Text */
+
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/tiempos-text-regular.woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/tiempos-text-italic.woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/tiempos-text-medium.woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tiempos Text';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/tiempos-text-medium-italic.woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Open Sans */
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/OpenSans300.woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/OpenSans300Italic.woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/OpenSans400.woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/OpenSans400Italic.woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/OpenSans700.woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/OpenSans700Italic.woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Playfair Display */
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/PlayfairDisplay-variable.woff2');
+  font-weight: 400 900; /* multiple values because variable font */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Merriweather Bold */
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url('https://assets.acdn.no/pkg/@amedia/brick-fonts/2.0.1/fonts/alfa/merriweather-bold.woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback font for National2 Narrow Regular (400) with font-descriptors */
+@font-face {
+  font-family: 'ArialFix';
+  src: local('Arial');
+  font-weight: 400;
+  size-adjust: 95%;
+  ascent-override: 104%;
+  descent-override: 26%;
+  line-gap-override: 0%;
+}
+
+/* Fallback font for National2 Narrow Bold (700) with font-descriptors */
+@font-face {
+  font-family: 'ArialNarrowFix';
+  src: local('Arial Narrow Bold');
+  font-weight: 700;
+  size-adjust: 101.2%;
+  ascent-override: 94%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+/* Fallback font for National2 Narrow Extra Bold (800) with font-descriptors */
+@font-face {
+  font-family: 'ArialNarrowFix';
+  src: local('Arial Narrow Bold');
+  font-weight: 800;
+  size-adjust: 102.5%;
+  ascent-override: 94%;
+  descent-override: 23%;
+  line-gap-override: 0%;
+}
