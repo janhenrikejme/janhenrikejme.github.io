@@ -1,0 +1,939 @@
+/*
+Part of this stylesheet originally originated from normalize.css
+but other parts are general global additions over time
+*/
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+}
+
+/**
+* Correct the font size and margin on `h1` elements within `section` and
+* `article` contexts in Chrome, Firefox, and Safari.
+*/
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+* 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+*/
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+* Add the correct font weight in Chrome, Edge, and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+* Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/**
+* Prevent `sub` and `sup` elements from affecting the line height in
+* all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Forms
+========================================================================== */
+
+/**
+* 1. Change the font styles in all browsers (opinionated).
+* 2. Remove the margin in Firefox and Safari.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+* Show the overflow in IE.
+* 1. Show the overflow in Edge.
+*/
+
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+* Remove the inheritance of text transform in Edge, Firefox, and IE.
+* 1. Remove the inheritance of text transform in Firefox.
+*/
+
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+* Remove the inner border and padding in Firefox.
+*/
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+* Restore the focus styles unset by the previous rule.
+*/
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+* Correct the padding in Firefox.
+*/
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+* 1. Correct the text wrapping in Edge and IE.
+* 2. Correct the color inheritance from `fieldset` elements in IE.
+* 3. Remove the padding so developers are not caught out when they zero out
+*    `fieldset` elements in all browsers.
+*/
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+* Correct the cursor style of increment and decrement buttons in Chrome.
+*/
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+* 1. Correct the odd appearance in Chrome and Safari.
+* 2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+* Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+*/
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+* 1. Correct the inability to style clickable types in iOS and Safari.
+* 2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* END RESET */
+
+body.maelstrom,
+body.maelstrom.is-section-or-frontpage #main-content-begin {
+  color: var(--page-color-inverted, #292827);
+  background-color: var(--page-color, #ffffff);
+}
+
+body.maelstrom {
+  overflow-x: hidden;
+}
+
+#main-content-begin {
+  position: relative;
+}
+
+iframe {
+  border: 0 none;
+}
+
+/* a11y link (keybord users can skip to main content) */
+.maelstrom-skip-link {
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.maelstrom-skip-link:focus {
+  top: 0;
+  left: 0;
+  right: initial;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 5px 10px 0;
+  overflow: visible;
+  clip: auto;
+  outline-color: #ff0;
+  background-color: #ff0;
+  z-index: 9999999;
+  text-decoration: none;
+  font-family: var(--title-font);
+  font-size: 17px;
+  font-weight: 500;
+  color: #000;
+}
+/* For Nettavisen only */
+body.themeNettavisen .maelstrom-skip-link:focus {
+  outline-color: var(--na-contrast-color, #ffcc14);
+  background-color: var(--na-contrast-color, #ffcc14);
+  padding: 3px 10px 5px;
+}
+
+.maelstrom-wrapper {
+  padding-top: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 533px) and (max-width: 1000px) {
+  .maelstrom-wrapper {
+    padding-top: 2vw;
+  }
+}
+
+@media screen and (max-width: 532px) {
+  .maelstrom-wrapper {
+    padding-top: 0;
+  }
+}
+
+/* footer */
+body.maelstrom footer.brandheader-footer {
+  margin-top: var(--brick-space-deckYGapL, 10px);
+}
+
+/* ads*/
+.maelstrom-skyscraper {
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  margin-left: 20px;
+  bottom: 0;
+}
+
+.maelstrom-skyscraper-left {
+  margin-left: 0;
+  margin-right: 20px;
+  left: auto;
+  right: 100%;
+}
+
+.maelstrom-topbanner {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1500px) {
+  .maelstrom-skyscraper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .maelstrom-topbanner {
+    margin-bottom: 2vw;
+  }
+}
+
+@media screen and (max-width: 532px) {
+  .maelstrom-topbanner {
+    margin-bottom: 4.8vw;
+  }
+}
+
+#unispring-tp {
+  position: absolute;
+  left: -10000px;
+}
+
+.pushapp [href*='/abo/'] {
+  display: none;
+}
+
+.is-section-or-frontpage.themeBravo,
+.tag-pages.themeBravo {
+  --page-color: #e5e5e5;
+  background-color: #e5e5e5;
+}
+
+/* Temporary override of bazaar ad label colors for budstikka and polkaposten*/
+/* All pages  */
+.themeBravo .am-bazaar-ad--labeled:after {
+  font-family: National2, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #474646;
+}
+
+.themeBravo .am-bazaar-ad--labeled:before {
+  border-top-width: 1px;
+  top: -13px;
+  border-top-color: #bfbfbf;
+}
+
+@media screen and (max-width: 532px) {
+  /* [data-pagemodel='rodimus'] selector can be removed when  */
+
+  body.rodimus.themeBravo.is-section-or-frontpage .maelstrom-wrapper {
+    padding-left: var(--brick-space-x1, 5px);
+    padding-right: var(--brick-space-x1, 5px);
+  }
+}
+
+.is-section-or-frontpage.themeAlfa,
+.tag-pages.themeAlfa {
+  --page-color: #f5f5f5;
+  background-color: #f5f5f5;
+}
+
+/* Temporary override of bazaar ad label colors for alfa*/
+/* All pages  */
+.themeAlfa .am-bazaar-ad--labeled:after {
+  font-family: National2, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #474646;
+}
+
+.themeAlfa .am-bazaar-ad--labeled:before {
+  border-top-width: 1px;
+  top: -13px;
+  border-top-color: #bfbfbf;
+}
+
+.is-section-or-frontpage.themeCharlie,
+.tag-pages.themeCharlie {
+  --page-color: #eee7e1;
+  background-color: #eee7e1;
+}
+/* Temporary override of bazaar ad label colors for budstikka and polkaposten*/
+/* All pages  */
+.themeCharlie .am-bazaar-ad--labeled:after {
+  font-family: National2, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #474646;
+}
+
+.themeCharlie .am-bazaar-ad--labeled:before {
+  border-top-width: 1px;
+  top: -13px;
+  border-top-color: #bfbfbf;
+}
+
+/* Innlogging aid ved lukket artikkel. Fjern kampanje */
+.pushapp div.aid-incentive-overlay div.incentive-card.product-card,
+.pushapp div.aid-incentive-overlay div.access-card.incentive-card {
+  display: none;
+}
+
+/* Bestill abonnement */
+.pushapp amedia-menubar amedia-subscriber-link {
+  display: none !important;
+}
+
+/* ==== Meny === */
+/* nord24/nordlys/iFinnmark/fremover */
+
+.pushapp .customer-service a[href$='/kundesenter/'],
+.pushapp .customer-service a[href$='/kundesenter/pakker/digital/'],
+.pushapp .customer-service a[href$='/kundesenter/privat/bestill/'],
+.pushapp
+  .customer-service
+  a[href*='/kundesenter/oversikt/kampanje/bestill-abonnement/'],
+.pushapp .customer-service a[href$='/kundesenter/oversikt/kampanje/'],
+.pushapp .customer-service a[href$='/kundesenter/privat/avisiskolen-2/'],
+.pushapp .customer-service a[href$='/eavis'],
+.pushapp .customer-service a[href$='/kundesenter/privat/abonnere/'],
+.pushapp .customer-service a[href$='/kundesenter/privat/min-side/'],
+.pushapp .customer-service a[href$='/kundesenter/tips-til-redaksjonen/'],
+.pushapp .customer-service a[href$='/kundesenter/oversikt/om-dt/'],
+.pushapp
+  .customer-service
+  a[href$='/kundesenter/kontakt-oss/ansatte/#Redaksjon-1'],
+.pushapp
+  .customer-service
+  a[href$='/kundesenter/oversikt/kampanje/meld-ferieflytting-og-midlertidig-adresseendring/'],
+.pushapp .customer-service a[href$='/kundesenter'],
+.pushapp
+  .customer-service
+  a[href$='/kundesenter/oversikt/annonsering/rubrikkannonser-for-privatpersoner/'] {
+  display: none;
+}
+
+/* If bolton (and other components) fails, they will send a error wrapped
+in a componentError. Note: This also applies to esi requests in varnish. So
+if this is to be changed, all apps delivering components and Varnish need to
+be changed. We show componentError on ?debug=true */
+.componentError {
+  display: none;
+}
+
+amedia-componentdebug .componentError {
+  display: block;
+}
+
+amedia-componentdebug {
+  display: block;
+  position: relative;
+}
+
+amedia-componentdebug .componentWrapper:hover,
+amedia-componentdebug.active .componentWrapper {
+  border: 2px dotted;
+}
+
+amedia-componentdebug .componentOverlay {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  padding: 5px;
+}
+
+@media (min-width: 1201px) {
+  amedia-componentdebug .componentInfoToggle {
+    position: absolute;
+    right: -60px;
+    z-index: 20;
+  }
+
+  amedia-componentdebug .componentInfoToggle button {
+    border-radius: 100px;
+  }
+
+  amedia-componentdebug .componentInfoToggle button .extrainfo {
+    display: none;
+  }
+}
+
+amedia-componentdebug .componentOverlay .componentOverlayButtons {
+  margin-bottom: 10px;
+  float: left;
+}
+
+amedia-componentdebug .componentWrapper:hover .componentOverlay,
+amedia-componentdebug.active .componentOverlay {
+  display: block;
+}
+
+amedia-componentdebug .componentWrapper:hover .componentHtml,
+amedia-componentdebug.active .componentHtml {
+  opacity: 0.3;
+}
+
+amedia-componentdebug .componentInfoToggle button {
+  color: var(--swatchMono-gray2);
+  background-color: var(--swatchMono-gray6);
+}
+
+amedia-componentdebug .componentInfoToggle button:hover {
+  box-shadow: 0 0 10px var(--swatchMono-black);
+}
+
+amedia-componentdebug.active .componentInfoToggle button {
+  color: #fff;
+  background-color: var(--swatchMono-black);
+}
+
+amedia-componentdebug .componentParameters {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-left: 10px;
+  z-index: 20;
+  float: left;
+}
+
+amedia-componentdebug .componentParameters pre {
+  margin: 0;
+}
+
+/** Copied https://github.com/kudago/smart-app-banner/blob/master/smart-app-banner.css 
+, windows and iOS removed**/
+
+.smartbanner-show {
+  margin-top: 60px;
+}
+.smartbanner-show smart-banner {
+  display: block;
+}
+
+/** Default **/
+smart-banner {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  font-family: 'Open Sans', sans-serif;
+  z-index: 9998;
+  overflow: hidden;
+  background: #3d3d3d;
+  line-height: 58px;
+}
+
+smart-banner .smartbanner-container {
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+smart-banner .smartbanner-close {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 5px 0 5px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  border: 0;
+  border-radius: 14px;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  margin-right: 7px;
+  color: #b1b1b3;
+  background: #1c1e21;
+  text-shadow: 0 1px 1px #000;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.8) inset,
+    0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+smart-banner .smartbanner-close:active,
+smart-banner .smartbanner-close:hover {
+  color: #eee;
+}
+
+smart-banner .smartbanner-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 37px;
+  height: 37px;
+  margin-right: 12px;
+  background-size: cover;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+smart-banner .smartbanner-info {
+  display: inline-block;
+  vertical-align: middle;
+  width: 44%;
+  font-size: 10px;
+  line-height: 1.2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+smart-banner .smartbanner-title {
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+  font-weight: bold;
+}
+
+smart-banner .smartbanner-button {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+  min-width: 12%;
+  color: #d1d1d1;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow:
+    0 0 0 1px #333,
+    0 0 0 2px #dddcdc;
+}
+
+smart-banner .smartbanner-button-text {
+  text-align: center;
+  display: block;
+  padding: 0 10px;
+  background: #000;
+  text-transform: none;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+smart-banner .smartbanner-button-text:active,
+smart-banner .smartbanner-button-text:hover {
+  background: #000;
+}
+
+div.maelstrom-wrapper {
+  max-width: 100%;
+}
+
+.maelstrom-article-footer,
+.maelstrom-wrapper .comments-section {
+  max-width: 980px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.travbanner-login-wrap {
+  margin: 0;
+}
+
+.travbanner-login-wrap .travbanner-wrap {
+  margin-top: -12px;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: calc(100% - 320px);
+}
+
+@media screen and (max-width: 600px) {
+  .travbanner-login-wrap .travbanner-wrap {
+    display: none;
+  }
+}
+
+.travbanner-login-wrap .rikstoto-login-wrap {
+  width: 300px;
+}
+
+.travbanner-login-wrap .rikstoto-login-wrap h2 {
+  font-family: var(--title-font);
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.sportspill-rikstoto-races-today-wrap {
+  text-align: center;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.sportspill-travbanner-wrap amedia-include:last-of-type {
+  margin-top: -30px;
+  margin-bottom: 100px;
+}
+
+/* BEGIN override elements outside of component control */
+#aid-overlay {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(41, 40, 39, 0.8);
+}
+
+.aid-background-blur {
+  filter: blur(5px);
+}
+/* END */
+
+amedia-yokohama-incentive {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.incentive__wrapper {
+  margin: 20px 16px;
+}
+
+@media screen and (min-width: 550px) {
+  .incentive__wrapper {
+    margin: 50px 16px;
+    width: 550px;
+  }
+}
+
+.maelstrom-article-topad {
+  order: 5;
+  margin-bottom: 10px;
+}
+
+.maelstrom-sticky-sky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}
+
+.sportspill-ios-menu-container {
+  max-width: 980px;
+  margin: 20px auto 20px;
+}
+
+.comments-section {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.comments-section .am-commentArea .am-commentsTitle {
+  font-family: var(--openSans);
+  font-weight: 400;
+  border-bottom: 5px solid #e7e6e2;
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.comments-section .am-commentArea {
+  margin-top: 20px;
+}
+
+.comments-section .am-commentArea .am-comments .response .responseCallToAction {
+  background: #e7e6e2;
+  color: #292827;
+  font-size: 15px;
+  padding: 2px 15px;
+
+  border: 0 none;
+  cursor: pointer;
+  margin: 0;
+  outline: 0 none;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: none;
+  font-weight: 700;
+  border-radius: 0;
+  font-family: 'Open Sans';
+  letter-spacing: 0;
+}
+
+.comments-section
+  .am-commentArea
+  .am-comments
+  .response
+  .responseCallToAction:hover {
+  background: #292827;
+  color: #fff;
+  box-shadow: none;
+}
+
+.comments-section .am-commentArea-inner .responseComments.responseWidget {
+  width: 100%;
+}
+
+.comments-section .am-commentArea-inner {
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .comments-section .am-commentArea-inner {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.comments-section .am-gridComp--feature .am-commentArea-inner {
+  width: 100%;
+}
+
+.comments-section .am-commentArea-inner .response * {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.comments-section .am-commentArea-inner .responseEditableBody p {
+  font-size: 15px;
+}
+
+.comments-section .am-commentsClosed {
+  margin: 30px 0 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+amedia-comment-invite {
+  margin-bottom: 50px;
+}
+
+amedia-show-topic-dialog {
+  display: block;
+  min-height: 1px;
+}
+
+.am-moreArticlesHeader .am-btn {
+  font-weight: 700;
+}
+
+.maelstrom-more-articles {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid #e7e6e2;
+  border-bottom: 1px solid #e7e6e2;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.maelstrom-more-articles .heading {
+  width: 60%;
+}
+
+.maelstrom-more-articles .heading h2 {
+  margin: 0;
+  font-family: var(--openSans);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.frontpage-link-wrapper .frontpage-link-button {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 24px;
+  padding: 9px 18px;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--openSans);
+  background-color: var(--newspaper-color);
+  display: block;
+}
+
+.frontpage-link-wrapper {
+  display: none;
+}
+
+@media screen and (min-width: 481px) {
+  .frontpage-link-wrapper {
+    width: 150px;
+    text-align: right;
+    display: block;
+  }
+}

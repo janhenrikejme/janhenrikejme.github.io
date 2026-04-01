@@ -1,0 +1,38 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --brick-colors-brandPrimaryBase: #1f6bb4; /** Primary brand color, formerly "--newspaper-color". Pair with brand.primary-base-contrast.base */
+  --brick-colors-brandPrimaryBaseContrast: #ffffff; /** Contrast color to primary brand color, formerly "--newspaper-color-inverted". Calculated to white or black. Pair with color: brand.primary-base */
+  --brick-colors-brandPrimary10: #c7e1ff; /** Lightest shade of the primary brand color, suitable for backgrounds. Meets AAA with brand.primary.80 or darker */
+  --brick-colors-brandPrimary30: #7bace2; /** Light shade. Meets AA with brand.primary.80 and darker. AAA not guaranteed */
+  --brick-colors-brandPrimary50: #1f6bb4; /** Mid tone shade, use for borders, separators and lines. For text use brand.primary.50-contrast */
+  --brick-colors-brandPrimary60: #004f8f; /** Darker mid tone shade, use for borders, separators and lines. Use brand.primary.contrast.60 for text or background */
+  --brick-colors-brandPrimary80: #002142; /** Dark brand shade, use for text and UI elements on light backgrounds */
+  --brick-colors-brandPrimaryContrast10: #000000; /** Contrast color for primary-10, can be used as background or text */
+  --brick-colors-brandPrimaryContrast30: #000000; /** Contrast color for primary-30, can be used as background or text */
+  --brick-colors-brandPrimaryContrast50: #ffffff; /** Contrast color for primary-50, can be used as background or text */
+  --brick-colors-brandPrimaryContrast60: #ffffff; /** Contrast color for primary-60, can be used as background or text */
+  --brick-colors-brandPrimaryContrast80: #ffffff; /** Contrast color for primary-80, can be used as background or text */
+  --brick-colors-brandAccentsSurfaceCustomOne: #16254c; /** Accent surface color (custom-one). Use as background for branded accent areas. Pair with brand/accents/text/custom-one. */
+  --brick-colors-brandAccentsSurfaceCustomTwo: #feefe0; /** Accent surface color (custom-two). Use as background for branded accent areas. Pair with brand/accents/text/custom-two. */
+  --brick-colors-brandAccentsSurfaceCustomThree: #b71918; /** Accent surface color (custom-three). Use as background for branded accent areas. Pair with brand/accents/text/custom-three. */
+  --brick-colors-brandAccentsSurfaceOpinion: #ffc2d2; /** Accent surface color (opinion). Use as background for branded accent areas. Pair with brand/accents/text/opinion. */
+  --brick-colors-brandAccentsSurfaceSubtleCustomOne: #2e3b5e; /** Subtle tint of accent surface (custom-one). Simulates a ~10% white or black overlay on the accent color (alpha-composited in sRGB). Pair with black text for light accents, white text for dark accents. */
+  --brick-colors-brandAccentsSurfaceSubtleCustomTwo: #e4d7c9; /** Subtle tint of accent surface (custom-two). Simulates a ~10% white or black overlay on the accent color (alpha-composited in sRGB). Pair with black text for light accents, white text for dark accents. */
+  --brick-colors-brandAccentsSurfaceSubtleCustomThree: #be3030; /** Subtle tint of accent surface (custom-three). Simulates a ~10% white or black overlay on the accent color (alpha-composited in sRGB). Pair with black text for light accents, white text for dark accents. */
+  --brick-colors-brandAccentsSurfaceSubtleOpinion: #e5aebd; /** Subtle tint of accent surface (opinion). Simulates a ~10% white or black overlay on the accent color (alpha-composited in sRGB). Pair with black text for light accents, white text for dark accents. */
+  --brick-colors-brandAccentsTextCustomOne: #ffffff; /** Text color on accent surface (custom-one). Calculated to white or black based on luma of the surface color. Always pair with brand/accents/surface/custom-one. */
+  --brick-colors-brandAccentsTextCustomTwo: #000000; /** Text color on accent surface (custom-two). Calculated to white or black based on luma of the surface color. Always pair with brand/accents/surface/custom-two. */
+  --brick-colors-brandAccentsTextCustomThree: #ffffff; /** Text color on accent surface (custom-three). Calculated to white or black based on luma of the surface color. Always pair with brand/accents/surface/custom-three. */
+  --brick-colors-brandAccentsTextOpinion: #000000; /** Text color on accent surface (opinion). Calculated to white or black based on luma of the surface color. Always pair with brand/accents/surface/opinion. */
+  --brick-colors-brandAccentsBreakingCustomOne: #ee0000; /** Breaking news color on accent surface (custom-one). Points to primitives.red (#ee0000) when it achieves WCAG AA for non-text/UI components (3:1) contrast against the surface; otherwise falls back to the surface's text contrast color. */
+  --brick-colors-brandAccentsBreakingCustomTwo: #ee0000; /** Breaking news color on accent surface (custom-two). Points to primitives.red (#ee0000) when it achieves WCAG AA for non-text/UI components (3:1) contrast against the surface; otherwise falls back to the surface's text contrast color. */
+  --brick-colors-brandAccentsBreakingCustomThree: #ffffff; /** Breaking news color on accent surface (custom-three). Points to primitives.red (#ee0000) when it achieves WCAG AA for non-text/UI components (3:1) contrast against the surface; otherwise falls back to the surface's text contrast color. */
+  --brick-colors-brandAccentsBreakingOpinion: #000000; /** Breaking news color on accent surface (opinion). Points to primitives.red (#ee0000) when it achieves WCAG AA for non-text/UI components (3:1) contrast against the surface; otherwise falls back to the surface's text contrast color. */
+  --brick-colors-brandHeaderSurfaceBanner: #1f6bb4; /** Background color for header banner. "positiveHeader=true" means white banner surface. */
+  --brick-colors-brandHeaderSurfaceMenu: #e7e6e2; /** Background color for header menu. "positiveHeader=true" means brand-colored menu. */
+  --brick-colors-brandHeaderTextBanner: #ffffff; /** Text or icons on header component banner */
+  --brick-colors-brandHeaderTextMenu: #000000; /** Text or icons on header component menu, black or white depending on "positiveHeader" property */
+}

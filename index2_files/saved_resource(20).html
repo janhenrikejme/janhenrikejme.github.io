@@ -1,0 +1,137 @@
+
+<!-- saved from url=(0011)about:blank -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+      p {
+        color: white;
+        font-size: 12px;
+        text-align: right;
+        padding-right: 10px;
+        padding-top: 8px;
+        z-index: 83;
+        
+      }
+      .circle {
+        height: 85px;
+        width: 85px;
+        background-size: cover;
+        background-position: center 0;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        display: none;
+        position: absolute;
+        top: 345px;
+        right: 20px;
+        z-index: 3;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body style="margin: 0;">
+    <div id="container" class="container_10088657" style="width: 580px; height: 500px; font-family: Roboto; font-weight: regular; font-color: white; overflow:hidden; border: 1px solid #e7e6e2; cursor: pointer; background-color: #d1d3d4; box-sizing: border-box; position: relative; text-align: left;">
+  <img src="https://cdn.easy-ads.com/subscriber/upload/data/1772640029_77877.jpg" data-tag="shoutimage" style="width: 578px; height: 330px;">
+  
+   <div style="z-index: 54;background-color: rgba(255, 255, 255, 0.57);position: absolute;top: 301px;right:0;font-size: 14px;padding: 5px;color: black;text-decoration: underline;font-weight: bold;">
+     <span class="show-prospect">SE PROSPEKTET</span>
+  </div>  
+  <div id="circle" class="circle inner-border" data-tag="brokerimage" style="background-image: url(&quot;https://g.api.no/obscura/API/image/r1/zett/708x708r/1510165749000/10/88/1088a4d3516b530a0e825740c6e6c92c&quot;); border: 3px solid rgb(163, 88, 51); display: inline-block;">
+</div>
+  <div style="width: 580px;height: 3px;background-color: #a35833;position: absolute;top: 412px;z-index: 2;"> 
+  </div>
+  <div style="width: 565px;height: 65px;background-color: #FFF;;z-index: 2;font-size: 16px;padding-left: 15px;padding-top: 20px;"> 
+    <div>
+<b>Oslo,</b> Fyrstikkbakken 14C
+      <br> 7.750.000 kr,- | <span class="areal">77kvm BRA-i</span> | <span class="real-estate-type">Leilighet</span></div>
+  </div>
+  <div style="width: 565px;height: 83px;background-color: #000;position: relative;z-index: 2;font-size: 14px;padding-left: 15px;color:#fff;"> 
+    <p style="margin: 0; padding-top: 31px;">
+      <span style="text-transform: uppercase;color: #fff;">Stefan Safri</span>
+      <br>
+      <span style="color: #fff;">Eiendomsmegler / Partner</span>
+    </p>
+    <img src="https://cdn.easy-ads.com/subscriber/upload/groups/1517400455_16105.png" data-tag="logo" style="max-width: 230px; max-height: 50px; z-index: 50; position: absolute; bottom: 20px; margin-left: 20px;">
+  </div>
+  
+  <script>
+  
+  if( "https://g.api.no/obscura/API/image/r1/zett/708x708r/1510165749000/10/88/1088a4d3516b530a0e825740c6e6c92c" === "" ) {
+      var brokerImg = document.getElementById("circle");
+      brokerImg.style.display = "none";
+    }
+    
+    function translateToNewNorwegian() {
+      
+      var showProspect = document.getElementsByClassName("show-prospect");
+      var realEstateType = document.getElementsByClassName("real-estate-type");
+      var targets = '{"amedia_avis":["www.noblad.no"]}';
+      
+      var nynorskaviser = [
+        "www.firda.no",
+        "www.firdaposten.no",
+        "www.sognavis.no"
+      ];
+      
+      var length = nynorskaviser.length;
+      
+      while(length--) {
+           
+        if (targets.indexOf(nynorskaviser[length])!=-1) {
+          
+          for( var count = 0; count < showProspect.length; count++ ) {
+            if ( typeof showProspect[count] !== "undefined" ) {
+              showProspect[count].innerHTML = "SJÅ PROSPEKTET";
+            }
+          }
+          
+          for( var reCount = 0; reCount < realEstateType.length; reCount++ ) {
+            if( realEstateType[reCount].innerHTML == "Enebolig" )
+              realEstateType[reCount].innerHTML = "Einebustad";
+            else if( realEstateType[reCount].innerHTML == "Fritidsbolig" )
+              realEstateType[reCount].innerHTML = "Fritidsbustad";
+            else if( realEstateType[reCount].innerHTML == "Leilighet" )
+              realEstateType[reCount].innerHTML = "Leilegheit";
+            else if( realEstateType[reCount].innerHTML == "Tomannsbolig" )
+              realEstateType[reCount].innerHTML = "Tomannsbustad";
+            else if( realEstateType[reCount].innerHTML == "Rekkehus" )
+              realEstateType[reCount].innerHTML = "Rekkjehus";
+            else if( realEstateType[reCount].innerHTML == "Annet" )
+              realEstateType[reCount].innerHTML = "Anna";
+          }
+        }
+        // END if nynorskaviser
+      }
+      // END while
+    }
+    // END function
+    
+    translateToNewNorwegian();  
+    
+    if( "https://g.api.no/obscura/API/image/r1/zett/708x708r/1510165749000/10/88/1088a4d3516b530a0e825740c6e6c92c" !== "" ) {
+      var brokerImg = document.querySelector(".circle");
+      brokerImg.style.display = "inline-block";
+    }
+    
+    var container = document.getElementById("container");
+    if ("" == "yes" && "https://privatmegleren.no/registrerinteressent/109532" != "") {
+        container.onclick = function () { window.open("https://privatmegleren.no/registrerinteressent/109532", "_blank"); };
+    } else {
+        container.onclick = function () { window.open("https://adclick.g.doubleclick.net/pcs/click%3Fxai%3DAKAOjstmcQtDC3eOexnZNpGgLldczAcsuPjsri-PR9ghuB8nAR4tug4Qvq4yCIMzlidQtHXdKTZrt73bKoYKmJYeEnxQOySGnc6dindLOMD8zYcsVIqmaXnM9wtkCZjl7eDZFxylGkK_yzzAtc1GoHXLox-a9Y0nvlCmCFg2dLqF3U3cnJoqFMgwWa2UorTIqvMJx2dPsjh5zA-LK2NJCHWl8rbHNVq9nulm06mbgFVZ3AKFskzGvPb4Q_TGrGrjOYeeMVxNNFslWhOj69MUWpdmRkiP_zMqqtKn5C_VcrVa8AAKxg3jgbSj1ip_eQLImPfOQeC_u6kXGaZf1UwY2fOrCs58E3z2Cs0eBiOpUGqqAinTtUEMOhegOr4qUaEx8UuZ_rSwJQSvK-AXZkukpqVCJCtuXr8iPZcfVSe_q-e8nlHICTEiOcA%26sai%3DAMfl-YRlcGN_BmL43hyYtyYzvKnNTj36FYYeYzKCkPBPB_La8x5KSidcQC_swQT_ZILk-nCugDKkLDurrZGb56rOU44P5n6fN6fEAHY9X_nMDXMY6EZpm-ud-ojTPy8pS2_Li4gsOMR1utiYGWxcxR8_Qt_4WfWz6v_wQTDl7Q6khVOIUZkBrCTXlySOFuDDqo9WxsK4X0FCECBgDmd6oIRyz5izjw4MhIo%26sig%3DCg0ArKJSzDbROnVmc69TEAE%26fbs_aeid%3D%255Bgw_fbsaeid%255D%26urlfix%3D1%26adurl%3Dhttps%3A%2F%2Fads.easy-ads.com%2Fclc.php%3Fadid%3D10088657%26bookingid%3D11908417%26productid%3D452%26campaignid%3D903294%26flightid%3D0%26priceid%3D%26timestamp%3D1775023361%26check%3DQZU5BT4bq2Tu8yVgyKoCVW0FvJvFddseX2RwmvcnvMs%253D%26templateid%3D1168%26url%3Dhttps%253A%252F%252Fwww.noblad.no%252Fvis%252Feiendomtilsalgs%252F4558189", "_blank"); };
+    }
+
+    var braI = "77";
+    var pRom = "77";
+    var areal = document.querySelector(".container_10088657 .areal");
+    if( areal !== null ) {
+        if (braI === "") {
+            areal.innerHTML = pRom + "kvm P-rom";
+        }   
+        else {
+            areal.innerHTML = braI + "kvm BRA-i";
+        }
+    }
+
+  </script>
+</div>                                                                                                                            
+  
+</body></html>
