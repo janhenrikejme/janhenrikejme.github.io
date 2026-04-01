@@ -1,0 +1,20 @@
+.relatedContentContainer {
+  border-bottom: 1px solid #e7e6e2;
+  /*padding-bottom: 20px;*/
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.relatedContentContainer > * {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .relatedContentContainer > * {
+    width: 32%;
+    flex-grow: 0;
+  }
+}
